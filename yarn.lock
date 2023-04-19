@@ -5818,12 +5818,12 @@
   resolved "https://registry.yarnpkg.com/@tryghost/kg-card-factory/-/kg-card-factory-4.0.6.tgz#82ba6f887b27ee44eb21942deb9a6cbe3ea1f226"
   integrity sha512-BLiRBL1BnicBGEJkuCtR3qdmlWaZ0YB7u9S+9sX4V/E9ikB40hAphS5sIf/l+j7LyyTygMhjIP0PBb64bVdGxA==
 
-"@tryghost/kg-clean-basic-html@3.0.12", "@tryghost/kg-clean-basic-html@^3.0.12":
+"@tryghost/kg-clean-basic-html@3.0.12":
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/@tryghost/kg-clean-basic-html/-/kg-clean-basic-html-3.0.12.tgz#1fa91fee8a2927751b000d1b41c0b3fa4e691f2e"
   integrity sha512-b57msTHdd3kGpTLL2kXIFJmTWfinW7CYH+EZuZLG0xAx/QMWkVUtD7LuJFEAC1tw+ugHW/wQODR0tfyg3EbUUA==
 
-"@tryghost/kg-clean-basic-html@^3.0.13":
+"@tryghost/kg-clean-basic-html@^3.0.12", "@tryghost/kg-clean-basic-html@^3.0.13":
   version "3.0.13"
   resolved "https://registry.yarnpkg.com/@tryghost/kg-clean-basic-html/-/kg-clean-basic-html-3.0.13.tgz#5cf1700ae3ceef3698d3be74975768a13e51061b"
   integrity sha512-x+dq93q5v0cLU5sWe4byOI7CYAG8n+7lkqgb6+DowDjmLVAgrtnu6OiFugMS6DS5EUxDOhHdZN8IxPyiLYmJ6A==
@@ -17769,10 +17769,10 @@ i18next-parser@7.7.0:
     vinyl-fs "^3.0.2"
     vue-template-compiler "^2.6.11"
 
-i18next@22.4.14, i18next@^22.0.4:
-  version "22.4.14"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.4.14.tgz#18dd94e9adc2618497c7de101a206e1ca3a18727"
-  integrity sha512-VtLPtbdwGn0+DAeE00YkiKKXadkwg+rBUV+0v8v0ikEjwdiJ0gmYChVE4GIa9HXymY6wKapkL93vGT7xpq6aTw==
+i18next@22.4.15, i18next@^22.0.4:
+  version "22.4.15"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-22.4.15.tgz#951882b751872994f8502b5a6ef6f796e6a7d7f8"
+  integrity sha512-yYudtbFrrmWKLEhl6jvKUYyYunj4bTBCe2qIUYAxbXoPusY7YmdwPvOE6fx6UIfWvmlbCWDItr7wIs8KEBZ5Zg==
   dependencies:
     "@babel/runtime" "^7.20.6"
 
