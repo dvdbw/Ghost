@@ -20,6 +20,8 @@ jobs:
     name: Lint
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v3
         env:
           FORCE_COLOR: 0
@@ -94,6 +96,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v3
         env:
           FORCE_COLOR: 0
@@ -149,6 +152,9 @@ jobs:
     name: Unit Tests (Node ${{ matrix.node }})
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
       - uses: actions/setup-node@v3
         env:
           FORCE_COLOR: 0
@@ -157,12 +163,6 @@ jobs:
           cache: yarn
 
       - run: yarn --prefer-offline
-
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        with:
-          ## limits ssh access and adds the ssh public key for the user which triggered the workflow
-          limit-access-to-actor: true
 
       - run: yarn test:unit
 
@@ -199,6 +199,8 @@ jobs:
     name: Database Tests (Node ${{ matrix.node }}, ${{ matrix.env.DB }})
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v3
         env:
           FORCE_COLOR: 0
@@ -229,12 +231,6 @@ jobs:
       - name: Set env vars (MySQL)
         if: contains(matrix.env.DB, 'mysql')
         run: echo "database__connection__password=root" >> $GITHUB_ENV
-
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        with:
-          ## limits ssh access and adds the ssh public key for the user which triggered the workflow
-          limit-access-to-actor: true
 
       - name: Run tests
         working-directory: ghost/core
@@ -301,6 +297,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v3
         env:
           FORCE_COLOR: 0
@@ -321,12 +318,6 @@ jobs:
 
       - run: mv ghost-*.tgz ghost.tgz
         working-directory: ghost/core
-
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        with:
-          ## limits ssh access and adds the ssh public key for the user which triggered the workflow
-          limit-access-to-actor: true
 
       - name: Clean Install
         run: |
